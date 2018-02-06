@@ -60,6 +60,6 @@ class Student
     sql = <<-SQL
       SELECT * FROM students WHERE name = ?;
     SQL
-    DB[:conn].execute(sql, name)
+    Student.new_form_db(DB[:conn].execute(sql, name)[0])
   end
 end
