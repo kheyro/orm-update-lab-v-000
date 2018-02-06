@@ -32,9 +32,9 @@ class Student
   end
 
   def new_from_db(row)
-    student = Student.new(row[1], row[2], row[0])
+    Student.new(row[1], row[2], row[0])
   end
-    
+
   def save
     if self.id
       update
